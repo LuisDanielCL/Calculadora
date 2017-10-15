@@ -7,3 +7,11 @@ C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora
 C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.csproj.CoreCompileInputs.cache
 C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.exe
 C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.pdb
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\bin\Debug\calculadora.exe.config
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\bin\Debug\calculadora.exe
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\bin\Debug\calculadora.pdb
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\bin\Debug\nunit.framework.xml
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\obj\Debug\calculadora.csprojResolveAssemblyReference.cache
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\obj\Debug\calculadora.csproj.CoreCompileInputs.cache
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\obj\Debug\calculadora.exe
+C:\Users\migue\OneDrive\Documents\GitHub\calculadora\obj\Debug\calculadora.pdb
