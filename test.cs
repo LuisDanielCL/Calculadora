@@ -37,7 +37,9 @@ namespace calculadora
             Calc calculadora = new Calc();
             var ex = Assert.Throws<Exception>(() => calculadora.Suma(float.MaxValue, float.MaxValue));
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite menor."));
-=======
+
+        }
+
         //Prueba de resta en caso de que los numeros sean simples
         //no se encuantrar en los limites, ni sean de punto decimal
         public void RestaNumeroNormal()
