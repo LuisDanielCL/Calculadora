@@ -69,7 +69,7 @@ namespace calculadora
         }
 
         [TestCase]
-        //Prueba de resta en caso de que los numeros sean simples
+        //Prueba de multiplicacion en caso de que los numeros sean simples
         //se encuentra en el limite maximo
         public void MultiplicacionLimiteMayor()
         {
@@ -79,7 +79,7 @@ namespace calculadora
         }
 
         [TestCase]
-        //Prueba de resta en caso de que los numeros sean simples
+        //Prueba de multiplicacion en caso de que los numeros sean simples
         //se encuentra en el limite minimo
         public void MultiplicacionLimiteMinimo()
         {
