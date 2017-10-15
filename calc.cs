@@ -42,6 +42,16 @@ namespace calculadora
         public float Divide(float primerNumero, float segundoNumero)
         {
             float salida = primerNumero / segundoNumero;
+
+            if (segundoNumero == 0)
+            {
+                throw new System.Exception("No se puede dividir entre cero.");
+            }
+            if (salida == float.PositiveInfinity)
+            {
+                throw new System.Exception("El resultado supera el limite maximo.");
+            }
+
             SalvarMemoria(salida);
             return memoria;
         }
