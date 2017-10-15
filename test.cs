@@ -47,13 +47,9 @@ namespace calculadora
             Assert.AreEqual(0.5f, calculadora.Suma(10.9f, -10.4f));
         }
 
-<<<<<<< HEAD
-    [TestCase]
-=======
+
         [TestCase]
->>>>>>> a634ca159543bcd355f519267b8914a33714cde1
-        //Prueba de resta en caso de que los numeros sean simples
-        //no se encuantrar en los limites, ni sean de punto decimal
+
         public void RestaNumeroNormal()
         {
             Calc calculadora = new Calc();
