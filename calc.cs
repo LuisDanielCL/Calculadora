@@ -12,43 +12,43 @@ namespace calculadora
     {
         private float memoria = 0;
 
-        float Suma(float primerNumero,float segundoNumero) {
+        public float Suma(float primerNumero,float segundoNumero) {
             float salida = primerNumero + segundoNumero;
             SalvarMemoria(salida);
             return memoria;
         }
 
-        float Resta(float primerNumero, float segundoNumero)
+        public float Resta(float primerNumero, float segundoNumero)
         {
             float salida = primerNumero - segundoNumero;
             SalvarMemoria(salida);
             return memoria;
         }
 
-        float Multiplica(float primerNumero, float segundoNumero)
+        public float Multiplica(float primerNumero, float segundoNumero)
         {
             float salida = primerNumero * segundoNumero;
             SalvarMemoria(salida);
             return memoria;
         }
 
-        float Divide(float primerNumero, float segundoNumero)
+        public float Divide(float primerNumero, float segundoNumero)
         {
             float salida = primerNumero / segundoNumero;
             SalvarMemoria(salida);
             return memoria;
         }
 
-        void BorrarMemoria()
+        public void BorrarMemoria()
         {
             memoria = 0;
         }
 
-        void SalvarMemoria(float numero) {
+        public void SalvarMemoria(float numero) {
             memoria = numero;
         }
 
-        float GetMemoria()
+        public float GetMemoria()
         {
             return memoria;
         }

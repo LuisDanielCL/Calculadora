@@ -1,0 +1,9 @@
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\bin\Debug\calculadora.exe.config
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\bin\Debug\calculadora.exe
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\bin\Debug\calculadora.pdb
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\bin\Debug\nunit.framework.dll
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\bin\Debug\nunit.framework.xml
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.csprojResolveAssemblyReference.cache
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.csproj.CoreCompileInputs.cache
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.exe
+C:\Users\LuisDanielCL\source\repos\calculadora\calculadora\obj\Debug\calculadora.pdb
