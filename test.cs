@@ -88,6 +88,7 @@ namespace calculadora
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
         }
 
+        //-------------------------Tests division-------------------------
         [TestCase]
         //Prueba de suma en caso de que los numeros sean simples
         //no se encuentren en los limites, ni sean de punto decimal
@@ -95,6 +96,24 @@ namespace calculadora
         {
             Calc calculadora = new Calc();
             Assert.AreEqual(2, calculadora.Divide(10, 5));
+        }
+
+        [TestCase]
+        //Prueba de division limite maximo
+        public void DivisionMaxima()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Divide(float.MaxValue, 0.05f));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
+        }
+
+        [TestCase]
+        //Prueba de division entre cero
+        public void DivisionEntreCero()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Divide(10, 0));
+            Assert.That(ex.Message, Is.EqualTo("No se puede dividir entre cero."));
         }
 
         //-------------------------Tests Memoria-------------------------
