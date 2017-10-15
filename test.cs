@@ -40,6 +40,7 @@ namespace calculadora
 
         }
 
+        [TestCase]
         //Prueba de resta en caso de que los numeros sean simples
         //no se encuantrar en los limites, ni sean de punto decimal
         public void RestaNumeroNormal()
@@ -47,5 +48,26 @@ namespace calculadora
             Calc calculadora = new Calc();
             Assert.AreEqual(20, calculadora.Resta(28, 8));
         }
+
+        [TestCase]
+        //Prueba de suma en caso de que los numeros sean simples
+        //se encuentra en el limite minimo
+        public void RestaLimiteMenor()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Resta(float.MinValue, float.MaxValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
+        }
+
+        [TestCase]
+        //Prueba de suma en caso de que los numeros sean simples
+        //se encuentra en el limite maximo
+        public void RestaLimiteMayor()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Resta(float.MaxValue, float.MinValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
+        }
+
     }
 }
