@@ -44,7 +44,6 @@ namespace calculadora
         {
             Calc calculadora = new Calc();
             Assert.AreEqual(20, calculadora.Resta(28, 8));
->>>>>>> 72b1ae1cdf22d5126e868b5a3785092058922cba
         }
     }
 }
