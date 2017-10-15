@@ -19,6 +19,7 @@ namespace calculadora
         }
 
         [TestCase]
+<<<<<<< HEAD
         //Prueba de suma en caso de que los numeros sean simples
         //se encuentra en el limite maximo
         public void SumaLimiteMayor()
@@ -36,6 +37,14 @@ namespace calculadora
             Calc calculadora = new Calc();
             var ex = Assert.Throws<Exception>(() => calculadora.Suma(float.MaxValue, float.MaxValue));
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite menor."));
+=======
+        //Prueba de resta en caso de que los numeros sean simples
+        //no se encuantrar en los limites, ni sean de punto decimal
+        public void RestaNumeroNormal()
+        {
+            Calc calculadora = new Calc();
+            Assert.AreEqual(20, calculadora.Resta(28, 8));
+>>>>>>> 72b1ae1cdf22d5126e868b5a3785092058922cba
         }
     }
 }
