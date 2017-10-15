@@ -10,8 +10,6 @@ namespace calculadora
     [TestFixture]
     class Test
     {
-        //-------------------------Tests suma-------------------------
-
         [TestCase]
         //Prueba de suma en caso de que los numeros sean simples
         //no se encuentren en los limites, ni sean de punto decimal
@@ -21,7 +19,7 @@ namespace calculadora
         }
 
         [TestCase]
-
+<<<<<<< HEAD
         //Prueba de suma en caso de que los numeros sean simples
         //se encuentra en el limite maximo
         public void SumaLimiteMayor()
@@ -37,23 +35,14 @@ namespace calculadora
         public void SumaLimiteMenor()
         {
             Calc calculadora = new Calc();
-            var ex = Assert.Throws<Exception>(() => calculadora.Suma(float.MinValue, float.MinValue));
-            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
+            var ex = Assert.Throws<Exception>(() => calculadora.Suma(float.MaxValue, float.MaxValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite menor."));
 
         }
 
         [TestCase]
-        //Prueba de suma en caso de que los numeros contengan decimales
-        public void SumaDecimal() { 
-            Calc calculadora = new Calc();
-            Assert.AreEqual(0.5f, calculadora.Suma(10.9f, -10.4f));
-        }
-
-
-
-        //-------------------------Tests resta-------------------------
-
-        [TestCase]
+        //Prueba de resta en caso de que los numeros sean simples
+        //no se encuantrar en los limites, ni sean de punto decimal
         public void RestaNumeroNormal()
         {
             Calc calculadora = new Calc();
@@ -80,34 +69,13 @@ namespace calculadora
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
         }
 
-
-
-        //-------------------------Tests resta-------------------------
         [TestCase]
-        //Prueba de division en caso de que los numeros sean simples
-        public void DivicionSimple()
+        //Prueba de suma en caso de que los numeros sean simples
+        //no se encuentren en los limites, ni sean de punto decimal
+        public void DivisionNormal()
         {
             Calc calculadora = new Calc();
-            Assert.AreEqual(12.5, calculadora.Divide(500, 40));
-        }
-
-
-        [TestCase]
-        //Prueba de division limite maximo
-        public void DivicionMaxima()
-        {
-            Calc calculadora = new Calc();
-            var ex = Assert.Throws<Exception>(() => calculadora.Divide(float.MaxValue, 0.05f));
-            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
-        }
-
-        [TestCase]
-        //Prueba de division entre cero
-        public void DivicionEntreCero()
-        {
-            Calc calculadora = new Calc();
-            var ex = Assert.Throws<Exception>(() => calculadora.Divide(10, 0));
-            Assert.That(ex.Message, Is.EqualTo("No se puede dividir entre cero."));
+            Assert.AreEqual(2, calculadora.Divide(10, 5));
         }
 
         //-------------------------Tests Memoria-------------------------
