@@ -39,6 +39,8 @@ namespace calculadora
 
         }
 
+        //---------------------------Test resta---------------------------------------------------------------
+
         [TestCase]
         //Prueba de resta en caso de que los numeros sean simples
         //no se encuantrar en los limites, ni sean de punto decimal
@@ -67,6 +69,8 @@ namespace calculadora
             var ex = Assert.Throws<Exception>(() => calculadora.Resta(float.MaxValue, float.MinValue));
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
         }
+
+        //-----------------------Test multiplicacion-------------------------------------------------------------
 
         [TestCase]
         //Prueba de multiplicacion en caso de que los numeros sean simples
