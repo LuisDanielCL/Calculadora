@@ -19,7 +19,6 @@ namespace calculadora
         }
 
         [TestCase]
-<<<<<<< HEAD
         //Prueba de suma en caso de que los numeros sean simples
         //se encuentra en el limite maximo
         public void SumaLimiteMayor()
@@ -35,8 +34,8 @@ namespace calculadora
         public void SumaLimiteMenor()
         {
             Calc calculadora = new Calc();
-            var ex = Assert.Throws<Exception>(() => calculadora.Suma(float.MaxValue, float.MaxValue));
-            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite menor."));
+            var ex = Assert.Throws<Exception>(() => calculadora.Suma(float.MinValue, float.MinValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
 
         }
 
