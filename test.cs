@@ -49,7 +49,7 @@ namespace calculadora
         }
 
         [TestCase]
-        //Prueba de suma en caso de que los numeros sean simples
+        //Prueba de resta en caso de que los numeros sean simples
         //se encuentra en el limite minimo
         public void RestaLimiteMenor()
         {
@@ -59,13 +59,33 @@ namespace calculadora
         }
 
         [TestCase]
-        //Prueba de suma en caso de que los numeros sean simples
+        //Prueba de resta en caso de que los numeros sean simples
         //se encuentra en el limite maximo
         public void RestaLimiteMayor()
         {
             Calc calculadora = new Calc();
             var ex = Assert.Throws<Exception>(() => calculadora.Resta(float.MaxValue, float.MinValue));
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
+        }
+
+        [TestCase]
+        //Prueba de resta en caso de que los numeros sean simples
+        //se encuentra en el limite maximo
+        public void MultiplicacionLimiteMayor()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Multiplica(float.MaxValue, float.MaxValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite maximo."));
+        }
+
+        [TestCase]
+        //Prueba de resta en caso de que los numeros sean simples
+        //se encuentra en el limite minimo
+        public void MultiplicacionLimiteMinimo()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Multiplica(float.MaxValue, float.MinValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
         }
 
         [TestCase]
