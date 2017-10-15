@@ -112,6 +112,15 @@ namespace calculadora
         }
 
         [TestCase]
+        //Prueba de division limite minimo
+        public void DivisionMinimo()
+        {
+            Calc calculadora = new Calc();
+            var ex = Assert.Throws<Exception>(() => calculadora.Divide(-0.05f, float.MaxValue));
+            Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
+        }
+
+        [TestCase]
         //Prueba de division entre cero
         public void DivisionEntreCero()
         {
