@@ -109,7 +109,34 @@ namespace calculadora
             var ex = Assert.Throws<Exception>(() => calculadora.Divide(10, 0));
             Assert.That(ex.Message, Is.EqualTo("No se puede dividir entre cero."));
         }
-        
 
+        //-------------------------Tests Memoria-------------------------
+        [TestCase]
+        //Prueba que se guarde la memoria
+        public void GuardarMemoria()
+        {
+            Calc calculadora = new Calc();
+            calculadora.SalvarMemoria(8);
+            Assert.That(calculadora.memoria == 8);
+        }
+
+        [TestCase]
+        //Prueba que se cargue la memoria
+        public void CargarMemoria()
+        {
+            Calc calculadora = new Calc();
+            calculadora.memoria = 10;
+            Assert.That(calculadora.GetMemoria() == 10);
+        }
+
+        [TestCase]
+        //Prueba que se guarde 'borre
+        public void BorarMemoria()
+        {
+            Calc calculadora = new Calc();
+            calculadora.memoria = 10;
+            calculadora.BorrarMemoria();
+            Assert.That(calculadora.memoria == 0);
+        }
     }
 }

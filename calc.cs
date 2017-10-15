@@ -10,7 +10,7 @@ namespace calculadora
 
     class Calc
     {
-        private float memoria = 0;
+        public float memoria = 0;
 
         public float Suma(float primerNumero,float segundoNumero) {
             float salida = primerNumero + segundoNumero;
