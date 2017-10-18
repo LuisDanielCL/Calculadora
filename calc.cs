@@ -43,6 +43,7 @@ namespace calculadora
         public float Multiplica(float primerNumero, float segundoNumero)
         {
             float salida = primerNumero * segundoNumero;
+            if(salida == float.PositiveInfinity)
             {
                 throw new System.Exception("El resultado supera el limite maximo.");
             }
@@ -65,6 +66,10 @@ namespace calculadora
             if (salida == float.PositiveInfinity)
             {
                 throw new System.Exception("El resultado supera el limite maximo.");
+            }
+            if (salida == float.NegativeInfinity)
+            {
+                throw new System.Exception("El resultado supera el limite minimo.");
             }
 
             SalvarMemoria(salida);

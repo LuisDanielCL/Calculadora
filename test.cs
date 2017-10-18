@@ -88,7 +88,7 @@ namespace calculadora
         public void MultiplicacionLimiteMinimo()
         {
             Calc calculadora = new Calc();
-            var ex = Assert.Throws<Exception>(() => calculadora.Multiplica(float.MaxValue, float.MinValue));
+            var ex = Assert.Throws<Exception>(() => calculadora.Multiplica(float.MaxValue, -10));
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
         }
 
@@ -116,7 +116,7 @@ namespace calculadora
         public void DivisionMinimo()
         {
             Calc calculadora = new Calc();
-            var ex = Assert.Throws<Exception>(() => calculadora.Divide(-0.05f, float.MaxValue));
+            var ex = Assert.Throws<Exception>(() => calculadora.Divide(float.MaxValue, -0.05f));
             Assert.That(ex.Message, Is.EqualTo("El resultado supera el limite minimo."));
         }
 
